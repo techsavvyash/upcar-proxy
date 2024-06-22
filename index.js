@@ -11,7 +11,7 @@ const proxyOptions = {
   changeOrigin: true, // needed for virtual hosted sites
   pathRewrite: (path, req) => {
     // Rewrite the path for the target
-    const newPath = path.replace('/', '');
+    const newPath = path.replace('/proxy', '');
     return newPath;
   },
   onProxyReq: (proxyReq, req, res) => {
